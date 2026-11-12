@@ -1,0 +1,21 @@
+PANDUAN MEMBUAT APK CBT UISB
+============================
+Aplikasi ini membuka https://cbt.uisb.web.id/ layar penuh, tanpa bilah browser.
+Saat peserta mengerjakan ujian: layar disematkan (tidak bisa pindah aplikasi),
+tombol Kembali dimatikan, dan tangkapan layar diblokir.
+
+CARA A - TANPA INSTAL APA PUN (GitHub, gratis)
+1. Buat akun di github.com, klik "New repository" (misal: cbt-uisb-apk), pilih Public/Private, Create.
+2. Klik "uploading an existing file", seret SEMUA isi folder ini (termasuk folder .github), Commit.
+   (Jika folder .github tidak ikut terseret: klik Add file > Create new file,
+   ketik nama .github/workflows/build-apk.yml lalu tempel isi file tersebut.)
+3. Buka tab "Actions" -> tunggu "Build APK" centang hijau (~5 menit).
+4. Klik hasil build -> bagian "Artifacts" -> unduh CBT-UISB-apk (zip berisi app-debug.apk).
+5. Kirim app-debug.apk ke HP peserta (WhatsApp/Drive), buka, izinkan "Instal dari sumber tidak dikenal".
+
+CARA B - Android Studio
+Buka folder ini di Android Studio > Build > Build APK(s).
+
+CATATAN
+- Saat ujian dimulai, Android menampilkan pesan "Sematkan aplikasi?" -> peserta tekan OK/Mengerti.
+- Ganti alamat: ubah baris URL di app/src/main/java/id/web/uisb/cbt/MainActivity.java.
